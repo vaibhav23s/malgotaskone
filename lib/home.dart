@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:cupertino_icons/cupertino_icons.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:taskone/detials.dart';
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -386,30 +387,34 @@ class _HomeState extends State<Home> {
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       crossAxisAlignment: CrossAxisAlignment.center,
                                       children: [
-                                        Text('Total Investments',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                        Text('Total Investments',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,),),
                                         Padding(
                                           padding: const EdgeInsets.only(right: 30),
-                                          child: Text('₹3,50,000',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
+                                          child: Text('₹3,50,000',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30,color: Color(0xFFdb9b15)),),
                                         ),
                                       ],
                                     ),
                                   ),
                                   SizedBox(width: 24,),
                                   Container(
-                                    width: 178,
-                                    height: 80,
+                                    margin: EdgeInsets.only(left: 30,top: 80),
+                                    width: 120,
+                                    height: 48,
 
                                     decoration:BoxDecoration(
                                       gradient: LinearGradient(
                                         colors: [
                                           Color(0xFFd3930d),
-                                          Color(0xFFFFC107), // yellow
+                                          Color(0xFFFFC107),
                                           Color(0xFFa6740b),
                                         ],
                                       ),
-                                      borderRadius: BorderRadius.circular(17),
+                                      borderRadius: BorderRadius.circular(10),
                                   ),
-                                    child: Center(child: Text('Invest now',style: TextStyle(fontSize: 26,fontWeight: FontWeight.bold),)),
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(left: 16,top: 10),
+                                      child: Text('Invest now',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+                                    ),
                                   )
                                 ],
                               )
@@ -486,13 +491,23 @@ class _HomeState extends State<Home> {
           
               ),
               BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  'assets/icons/explor.svg',
-                  width: 35,
+                icon: InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>detialspage()));
+                  },
+                  child: SvgPicture.asset(
+                    'assets/icons/explor.svg',
+                    width: 35,
+                  ),
                 ),
-                activeIcon: SvgPicture.asset(
-                  'assets/icons/explor.svg',
-                  width: 35,
+                activeIcon: InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>detialspage()));
+                  },
+                  child: SvgPicture.asset(
+                    'assets/icons/explor.svg',
+                    width: 35,
+                  ),
                 ),
                 label: 'explor',
               ),
