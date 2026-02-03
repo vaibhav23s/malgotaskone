@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cupertino_icons/cupertino_icons.dart';
+import 'package:taskone/flotbook.dart';
 import 'package:taskone/home.dart';
 import 'package:taskone/otp.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Vaibhavs App',
-      home: detialspage(),
+      home: flotbooking(),
     );
   }
 }
