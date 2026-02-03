@@ -159,7 +159,7 @@ class _detialspageState extends State<detialspage> {
                           Padding(
                             padding: const EdgeInsets.only(left:5.0),
                             child: Container(
-                              width: 130,
+                              width: 150,
                               height: 50,
                               decoration: BoxDecoration(
                                   color: Color(0xFFF2eadF),
@@ -167,7 +167,13 @@ class _detialspageState extends State<detialspage> {
                               ),
                               child: Padding(
                                 padding: const EdgeInsets.only(left: 8.0),
-                                child: SvgPicture.asset('assets/icons/glow.svg'),
+                                child: Stack(children: [
+                                  SvgPicture.asset('assets/icons/glow.svg',width: 50,height: 50,),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 43,top: 12),
+                                    child: Text('3 cent acers',style: TextStyle(fontSize: 16,color: Color(0xFFdb9b15),fontWeight: FontWeight.bold),),
+                                  )
+                                ],),
                               ),
                 
                             ),
@@ -296,7 +302,7 @@ class _detialspageState extends State<detialspage> {
                         padding: const EdgeInsets.only(left: 15,right: 15,top: 20),
                         child: Container(
                           width: double.infinity,
-                          height: 450,
+                          height: 350,
                           decoration: BoxDecoration(
                             color: Colors.white,
                              borderRadius: BorderRadius.circular(20),
@@ -308,7 +314,7 @@ class _detialspageState extends State<detialspage> {
                                 children: [
                                   Padding(
                                     padding: const EdgeInsets.only(left: 10.0,top: 10),
-                                    child: Text('Key Highlights',style:TextStyle(fontSize: 20),),
+                                    child: Text('Key Highlights',style:TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.only(right: 8.0,top: 10),
@@ -318,12 +324,152 @@ class _detialspageState extends State<detialspage> {
                               ),
                               Row(
                                 children: [
-                                  SvgPicture.asset('assets/icons/right.svg'),
+                                  SizedBox(height: 7,),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 8.0,top: 10),
+                                    child: Container(
+                                        width:35,
+                                        height:35,
+                                        child: SvgPicture.asset('assets/icons/right.svg')),
+                                  ),
+                                  SizedBox(width: 10,),
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 8.0),
+                                    child: Text('Near IT Hub',style: TextStyle(fontSize: 19),),
+                                  ),
                                 ],
-                              )
+                              ),
+                              Row(
+                                children: [
+                                  SizedBox(height: 7,),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 8.0,top: 10),
+                                    child: Container(
+                                        width:35,
+                                        height:35,
+                                        child: SvgPicture.asset('assets/icons/right.svg')),
+                                  ),
+                                  SizedBox(width: 10,),
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 8.0),
+                                    child: Text('Corner Property:',style: TextStyle(fontSize: 19),),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  SizedBox(height: 7,),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 8.0,top: 10),
+                                    child: Container(
+                                        width:35,
+                                        height:35,
+                                        child: SvgPicture.asset('assets/icons/right.svg')),
+                                  ),
+                                  SizedBox(width: 10,),
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 8.0),
+                                    child: Text('Airport 15km',style: TextStyle(fontSize: 19),),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  SizedBox(height: 7,),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 8.0,top: 10),
+                                    child: Container(
+                                        width:35,
+                                        height:35,
+                                        child: SvgPicture.asset('assets/icons/right.svg')),
+                                  ),
+                                  SizedBox(width: 10,),
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 8.0),
+                                    child: Text('2 open sides',style: TextStyle(fontSize: 19),),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  SizedBox(height: 7,),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 8.0,top: 10),
+                                    child: Container(
+                                        width:35,
+                                        height:35,
+                                        child: SvgPicture.asset('assets/icons/right.svg')),
+                                  ),
+                                  SizedBox(width: 10,),
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 8.0),
+                                    child: Text('Authority approved:',style: TextStyle(fontSize: 19),),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  SizedBox(height: 7,),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 8.0,top: 10),
+                                    child: Container(
+                                        width:35,
+                                        height:35,
+                                        child: SvgPicture.asset('assets/icons/right.svg')),
+                                  ),
+                                  SizedBox(width: 10,),
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 8.0),
+                                    child: Text('Metro Connectivity',style: TextStyle(fontSize: 19),),
+                                  ),
+                                ],
+                              ),
+
                             ],
                           ),
                         ),
+                      ),
+                      
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15.0,top: 20),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Instructions',style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 8.0),
+                              child: Text(' Browse verified land plots in premium locations with\n'
+                                  'complete legal documentationBrowse verified land\n'
+                                  'plots in premium locations with complete legal\n'
+                                  'documentationBrowse verified land plots in premium\n' ,textAlign: TextAlign.start,
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  height: 1.4,
+                                ),),
+                            )
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10,right: 10,bottom: 10),
+                        child: Container(
+                            width: double.infinity,
+                            height: 52,
+                            decoration: BoxDecoration(
+                              gradient:LinearGradient(
+                                colors: [
+                                  Color(0xFFd3930d),
+                                  Color(0xFFFFC107),
+                                  Color(0xFFa6740b),
+                                ]
+                              ),
+                                borderRadius: BorderRadius.circular(25),
+
+                        ),
+                            child: InkWell(
+                                onTap: (){},
+                                child: Center(child: Text('book',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)))),
                       )
                     ],
                   ),

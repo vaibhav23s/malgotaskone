@@ -168,6 +168,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
+  smart_seat_selector:
+    dependency: "direct main"
+    description:
+      name: smart_seat_selector
+      sha256: "9554c7449c6bfdf58f032b2e092341f9e1c653359c22f00a3d6bce0d7fbd7d34"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.7"
   source_span:
     dependency: transitive
     description:
