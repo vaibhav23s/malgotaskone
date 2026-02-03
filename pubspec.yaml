@@ -81,6 +81,9 @@ flutter:
     - assets/icons/go.svg
     - assets/icons/previusicon.svg
     - assets/icons/right.svg
+    - assets/icons/sold.svg
+    - assets/icons/selected.svg
+    - assets/icons/unselected.svg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
