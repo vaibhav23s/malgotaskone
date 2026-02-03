@@ -80,6 +80,7 @@ flutter:
     - assets/icons/location.svg
     - assets/icons/homeo.svg
     - assets/icons/go.svg
+    - assets/icons/previusicon.svg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
