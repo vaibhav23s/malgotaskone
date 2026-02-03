@@ -18,7 +18,6 @@ class _detialspageState extends State<detialspage> {
             width: double.infinity,
             height: 300,
             decoration: BoxDecoration(
-              color: Colors.black,
             ),
             child: Image.asset('assets/images/grassland.png'),
           )
