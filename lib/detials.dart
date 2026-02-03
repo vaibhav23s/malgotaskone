@@ -125,159 +125,211 @@ class _detialspageState extends State<detialspage> {
                ],
              ),
             ),
-            Container(
-              child: Column(
-                children: [
-                  Row(
+            Expanded(
+              child: SingleChildScrollView(
+                child: Container(
+                  child: Column(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 5.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Green Meadows Plot',style:TextStyle(fontSize: 20),),
-                            Row(
+                      Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 5.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Container(
-                                    width: 25,
-                                    height: 25,
-                                    child: SvgPicture.asset('assets/icons/location.svg',)),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 8.0),
-                                  child: Text('melur,madurai',style: TextStyle(fontSize: 16),),
+                                Text('Green Meadows Plot',style:TextStyle(fontSize: 20),),
+                                Row(
+                                  children: [
+                                    Container(
+                                        width: 25,
+                                        height: 25,
+                                        child: SvgPicture.asset('assets/icons/location.svg',)),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 8.0),
+                                      child: Text('melur,madurai',style: TextStyle(fontSize: 16),),
+                                    ),
+                
+                                  ],
                                 ),
-
                               ],
                             ),
-                          ],
-                        ),
+                          ),
+                          Spacer(),
+                          Padding(
+                            padding: const EdgeInsets.only(left:5.0),
+                            child: Container(
+                              width: 130,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                  color: Color(0xFFF2eadF),
+                                  borderRadius: BorderRadius.circular(25)
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 8.0),
+                                child: SvgPicture.asset('assets/icons/glow.svg'),
+                              ),
+                
+                            ),
+                          ),
+                
+                        ],
                       ),
-                      Spacer(),
+                     SizedBox(height: 20,),
+                     Container(
+                
+                       child: Row(
+                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                         children: [
+                           Padding(
+                             padding: const EdgeInsets.only(left: 5),
+                             child: Container(
+                               height: 78,
+                               width: 90,
+                               decoration: BoxDecoration(
+                                 borderRadius: BorderRadius.circular(12)
+                                 ,color: Colors.white,
+                
+                               ),
+                               child: Column(
+                                 mainAxisAlignment: MainAxisAlignment.center,
+                                 crossAxisAlignment: CrossAxisAlignment.start,
+                                 children: [
+                                   Padding(
+                                     padding: const EdgeInsets.only(left: 1.0),
+                                     child: Text('Plots Available',style: TextStyle(fontSize: 13,fontWeight: FontWeight.bold),),
+                                   ),
+                                   SizedBox(height: 7,),
+                                   Padding(
+                                     padding: const EdgeInsets.only(left: 4.0),
+                                     child: Text('67',style: TextStyle(fontSize: 19,color: Color(0xFF048358),fontWeight: FontWeight.bold),),
+                                   ),
+                                 ],
+                               ),
+                             ),
+                           ),
+                           Container(
+                             height: 78,
+                             width: 90,
+                             decoration: BoxDecoration(
+                               borderRadius: BorderRadius.circular(12)
+                               ,color: Colors.white,
+                
+                             ),
+                             child: Column(
+                               mainAxisAlignment: MainAxisAlignment.center,
+                               crossAxisAlignment: CrossAxisAlignment.start,
+                               children: [
+                                 Text('booked plots',style: TextStyle(fontSize: 13,fontWeight: FontWeight.bold),),
+                                 SizedBox(height: 7,),
+                                 Padding(
+                                   padding: const EdgeInsets.only(left: 4.0),
+                                   child: Text('30',style: TextStyle(fontSize: 19,color: Colors.red,fontWeight: FontWeight.bold),),
+                                 ),
+                               ],
+                             ),
+                           ),
+                           Container(
+                             height: 78,
+                             width: 90,
+                             decoration: BoxDecoration(
+                               borderRadius: BorderRadius.circular(12)
+                               ,color: Colors.white,
+                
+                             ),
+                             child: Column(
+                               mainAxisAlignment: MainAxisAlignment.center,
+                               crossAxisAlignment: CrossAxisAlignment.start,
+                               children: [
+                                 Padding(
+                                   padding: const EdgeInsets.only(left: 1.0),
+                                   child: Text('total cent',style: TextStyle(fontSize: 13,fontWeight: FontWeight.bold),),
+                                 ),
+                                 SizedBox(height: 7,),
+                                 Padding(
+                                   padding: const EdgeInsets.only(left: 5.0),
+                                   child: Text('03',style: TextStyle(fontSize: 19,color: Color(0xFF048358),fontWeight: FontWeight.bold),),
+                                 ),
+                               ],
+                             ),
+                           ),
+                           Padding(
+                             padding: const EdgeInsets.only(right: 5.0),
+                             child: Container(
+                               height: 78,
+                               width: 90,
+                               decoration: BoxDecoration(
+                                 borderRadius: BorderRadius.circular(12)
+                                 ,color: Colors.white,
+                
+                               ),
+                               child: Column(
+                                 mainAxisAlignment: MainAxisAlignment.center,
+                                 crossAxisAlignment: CrossAxisAlignment.start,
+                                 children: [
+                                   Padding(
+                                     padding: const EdgeInsets.only(left:5.0),
+                                     child: Text('Ratings',style: TextStyle(fontSize: 13,fontWeight: FontWeight.bold),),
+                                   ),
+                                   SizedBox(height: 7,),
+                                   Row(
+                                     children: [
+                                       Icon(Icons.star,color: Colors.orange,),
+                                       Padding(
+                                         padding: const EdgeInsets.only(left: 5.0),
+                                         child: Text('4.8/5',style: TextStyle(fontSize: 19,color: Color(0xFF048358),fontWeight: FontWeight.bold),),
+                                       ),
+                
+                                     ],
+                                   ),
+                
+                
+                                 ],
+                               ),
+                             ),
+                           ),
+                         ],
+                       ),
+                     ),
+              
                       Padding(
-                        padding: const EdgeInsets.only(left:5.0),
+                        padding: const EdgeInsets.only(left: 15,right: 15,top: 20),
                         child: Container(
-                          width: 130,
-                          height: 50,
+                          width: double.infinity,
+                          height: 450,
                           decoration: BoxDecoration(
-                              color: Color(0xFFF2eadF),
-                              borderRadius: BorderRadius.circular(25)
+                            color: Colors.white,
+                             borderRadius: BorderRadius.circular(20),
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 8.0),
-                            child: SvgPicture.asset('assets/icons/glow.svg'),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 10.0,top: 10),
+                                    child: Text('Key Highlights',style:TextStyle(fontSize: 20),),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(right: 8.0,top: 10),
+                                    child: Icon(Icons.keyboard_arrow_down,size: 35,),
+                                  )
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  SvgPicture.asset('assets/icons/right.svg'),
+                                ],
+                              )
+                            ],
                           ),
-
                         ),
-                      ),
-
+                      )
                     ],
                   ),
-                 SizedBox(height: 20,),
-                 Container(
-
-                   child: Row(
-                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                     children: [
-                       Padding(
-                         padding: const EdgeInsets.only(left: 5),
-                         child: Container(
-                           height: 78,
-                           width: 90,
-                           decoration: BoxDecoration(
-                             borderRadius: BorderRadius.circular(12)
-                             ,color: Colors.white,
-
-                           ),
-                           child: Column(
-                             mainAxisAlignment: MainAxisAlignment.center,
-                             crossAxisAlignment: CrossAxisAlignment.start,
-                             children: [
-                               Padding(
-                                 padding: const EdgeInsets.only(left: 1.0),
-                                 child: Text('Plots Available',style: TextStyle(fontSize: 13,fontWeight: FontWeight.bold),),
-                               ),
-                               SizedBox(height: 7,),
-                               Text('67',style: TextStyle(fontSize: 19,color: Color(0xFF048358),fontWeight: FontWeight.bold),),
-                             ],
-                           ),
-                         ),
-                       ),
-                       Container(
-                         height: 78,
-                         width: 90,
-                         decoration: BoxDecoration(
-                           borderRadius: BorderRadius.circular(12)
-                           ,color: Colors.white,
-
-                         ),
-                         child: Column(
-                           mainAxisAlignment: MainAxisAlignment.center,
-                           crossAxisAlignment: CrossAxisAlignment.start,
-                           children: [
-                             Text('booked plots',style: TextStyle(fontSize: 13,fontWeight: FontWeight.bold),),
-                             SizedBox(height: 7,),
-                             Text('67',style: TextStyle(fontSize: 19,color: Color(0xFF048358),fontWeight: FontWeight.bold),),
-                           ],
-                         ),
-                       ),
-                       Container(
-                         height: 78,
-                         width: 90,
-                         decoration: BoxDecoration(
-                           borderRadius: BorderRadius.circular(12)
-                           ,color: Colors.white,
-
-                         ),
-                         child: Column(
-                           mainAxisAlignment: MainAxisAlignment.center,
-                           crossAxisAlignment: CrossAxisAlignment.start,
-                           children: [
-                             Padding(
-                               padding: const EdgeInsets.only(left: 1.0),
-                               child: Text('total cent',style: TextStyle(fontSize: 13,fontWeight: FontWeight.bold),),
-                             ),
-                             SizedBox(height: 7,),
-                             Padding(
-                               padding: const EdgeInsets.only(left: 5.0),
-                               child: Text('67',style: TextStyle(fontSize: 19,color: Color(0xFF048358),fontWeight: FontWeight.bold),),
-                             ),
-                           ],
-                         ),
-                       ),
-                       Padding(
-                         padding: const EdgeInsets.only(right: 5.0),
-                         child: Container(
-                           height: 78,
-                           width: 90,
-                           decoration: BoxDecoration(
-                             borderRadius: BorderRadius.circular(12)
-                             ,color: Colors.white,
-
-                           ),
-                           child: Column(
-                             mainAxisAlignment: MainAxisAlignment.center,
-                             crossAxisAlignment: CrossAxisAlignment.start,
-                             children: [
-                               Padding(
-                                 padding: const EdgeInsets.only(left:5.0),
-                                 child: Text('Ratings',style: TextStyle(fontSize: 13,fontWeight: FontWeight.bold),),
-                               ),
-                               SizedBox(height: 7,),
-                               Padding(
-                                 padding: const EdgeInsets.only(left: 5.0),
-                                 child: Text('67',style: TextStyle(fontSize: 19,color: Color(0xFF048358),fontWeight: FontWeight.bold),),
-                               ),
-                             ],
-                           ),
-                         ),
-                       ),
-                     ],
-                   ),
-                 )
-                ],
+                ),
               ),
-            )
+            ),
           ],
         ),
       )
