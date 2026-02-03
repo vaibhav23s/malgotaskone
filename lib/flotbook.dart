@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:book_my_seat/book_my_seat.dart';
+
 class FlotBooking extends StatefulWidget {
   const FlotBooking({super.key});
 
@@ -7,8 +9,35 @@ class FlotBooking extends StatefulWidget {
 }
 
 class _FlotBookingState extends State<FlotBooking> {
+  late SeatLayoutStateModel seatLayoutStateModel;
 
-  List<Seat> selectedSeats = [];
+  @override
+  void initState() {
+    super.initState();
+
+    seatLayoutStateModel = SeatLayoutStateModel(
+      rows: 5,
+      cols: 6,
+      seatSvgSize: 35,
+      pathUnSelectedSeat: 'assets/unselected.svg',
+      pathSelectedSeat: 'assets/selected.svg',
+      pathSoldSeat: 'assets/sold.svg',
+      pathDisabledSeat: 'assets/disabled.svg',
+      currentSeatsState: List.generate(
+        5,
+            (row) => List.generate(
+          6,
+              (col) {
+            // kuch seats already sold
+            if ((row == 1 && col == 2) || (row == 2 && col == 4)) {
+              return SeatState.sold;
+            }
+            return SeatState.unselected;
+          },
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,25 +46,11 @@ class _FlotBookingState extends State<FlotBooking> {
         title: const Text("Flight Seat Booking"),
       ),
       body: Center(
-        child: SmartSeatSelector(
-          rows: 5,
-          columns: 6,
-          selectedSeats: selectedSeats, // ✅ FIX
-          unavailableSeats: const [
-            SeatPosition(row: 1, column: 2),
-            SeatPosition(row: 2, column: 4),
-          ],
-          onSeatSelected: (seat) {
-            setState(() {
-              if (selectedSeats.contains(seat)) {
-                selectedSeats.remove(seat);
-              } else {
-                selectedSeats.add(seat);
-              }
-            });
-
+        child: SeatLayoutWidget(
+          stateModel: seatLayoutStateModel,
+          onSeatStateChanged: (row, col, seatState) {
             debugPrint(
-              "Selected seat: Row ${seat.row}, Column ${seat.column}",
+              "Seat tapped → Row: $row Col: $col State: $seatState",
             );
           },
         ),
