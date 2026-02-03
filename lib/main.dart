@@ -3,6 +3,8 @@ import 'package:cupertino_icons/cupertino_icons.dart';
 import 'package:taskone/home.dart';
 import 'package:taskone/otp.dart';
 
+import 'detials.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Vaibhavs App',
-      home: Home(),
+      home: detialspage(),
     );
   }
 }
